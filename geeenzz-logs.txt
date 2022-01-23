@@ -1,0 +1,101 @@
+2022-01-23T06:53:25.802925+00:00 app[worker.1]: KeyError: 'ID not found: -1001473548283'
+2022-01-23T06:53:25.802926+00:00 app[worker.1]: 
+2022-01-23T06:53:25.802926+00:00 app[worker.1]: During handling of the above exception, another exception occurred:
+2022-01-23T06:53:25.802927+00:00 app[worker.1]: 
+2022-01-23T06:53:25.802927+00:00 app[worker.1]: Traceback (most recent call last):
+2022-01-23T06:53:25.802928+00:00 app[worker.1]:   File "/usr/local/lib/python3.9/site-packages/pyrogram/client.py", line 557, in handle_updates
+2022-01-23T06:53:25.802928+00:00 app[worker.1]:     channel=await self.resolve_peer(utils.get_channel_id(channel_id)),
+2022-01-23T06:53:25.802928+00:00 app[worker.1]:   File "/usr/local/lib/python3.9/site-packages/pyrogram/methods/advanced/resolve_peer.py", line 109, in resolve_peer
+2022-01-23T06:53:25.802929+00:00 app[worker.1]:     await self.send(
+2022-01-23T06:53:25.802929+00:00 app[worker.1]:   File "/usr/local/lib/python3.9/site-packages/pyrogram/methods/advanced/send.py", line 77, in send
+2022-01-23T06:53:25.802930+00:00 app[worker.1]:     r = await self.session.send(
+2022-01-23T06:53:25.802930+00:00 app[worker.1]:   File "/usr/local/lib/python3.9/site-packages/pyrogram/session/session.py", line 360, in send
+2022-01-23T06:53:25.802930+00:00 app[worker.1]:     return await self._send(data, timeout=timeout)
+2022-01-23T06:53:25.802931+00:00 app[worker.1]:   File "/usr/local/lib/python3.9/site-packages/pyrogram/session/session.py", line 330, in _send
+2022-01-23T06:53:25.802931+00:00 app[worker.1]:     RPCError.raise_it(result, type(data))
+2022-01-23T06:53:25.802931+00:00 app[worker.1]:   File "/usr/local/lib/python3.9/site-packages/pyrogram/errors/rpc_error.py", line 91, in raise_it
+2022-01-23T06:53:25.802932+00:00 app[worker.1]:     raise getattr(
+2022-01-23T06:53:25.802932+00:00 app[worker.1]: pyrogram.errors.exceptions.not_acceptable_406.AuthKeyDuplicated: Telegram says: [406 AUTH_KEY_DUPLICATED] - The same authorization key (session file) was used in more than one place simultaneously. You must delete your session file and log in again with your phone number or bot token (caused by "channels.GetChannels")
+2022-01-23T06:53:25.804547+00:00 app[worker.1]: Task exception was never retrieved
+2022-01-23T06:53:25.804549+00:00 app[worker.1]: future: <Task finished name='Task-2837' coro=<Client.handle_updates() done, defined at /usr/local/lib/python3.9/site-packages/pyrogram/client.py:528> exception=AuthKeyDuplicated('Telegram says: [406 AUTH_KEY_DUPLICATED] - The same authorization key (session file) was used in more than one place simultaneously. You must delete your session file and log in again with your phone number or bot token (caused by "updates.GetChannelDifference")')>
+2022-01-23T06:53:25.804550+00:00 app[worker.1]: Traceback (most recent call last):
+2022-01-23T06:53:25.804551+00:00 app[worker.1]:   File "/usr/local/lib/python3.9/site-packages/pyrogram/client.py", line 555, in handle_updates
+2022-01-23T06:53:25.804551+00:00 app[worker.1]:     diff = await self.send(
+2022-01-23T06:53:25.804552+00:00 app[worker.1]:   File "/usr/local/lib/python3.9/site-packages/pyrogram/methods/advanced/send.py", line 77, in send
+2022-01-23T06:53:25.804552+00:00 app[worker.1]:     r = await self.session.send(
+2022-01-23T06:53:25.804553+00:00 app[worker.1]:   File "/usr/local/lib/python3.9/site-packages/pyrogram/session/session.py", line 360, in send
+2022-01-23T06:53:25.804553+00:00 app[worker.1]:     return await self._send(data, timeout=timeout)
+2022-01-23T06:53:25.804553+00:00 app[worker.1]:   File "/usr/local/lib/python3.9/site-packages/pyrogram/session/session.py", line 330, in _send
+2022-01-23T06:53:25.804554+00:00 app[worker.1]:     RPCError.raise_it(result, type(data))
+2022-01-23T06:53:25.804554+00:00 app[worker.1]:   File "/usr/local/lib/python3.9/site-packages/pyrogram/errors/rpc_error.py", line 91, in raise_it
+2022-01-23T06:53:25.804555+00:00 app[worker.1]:     raise getattr(
+2022-01-23T06:53:25.804555+00:00 app[worker.1]: pyrogram.errors.exceptions.not_acceptable_406.AuthKeyDuplicated: Telegram says: [406 AUTH_KEY_DUPLICATED] - The same authorization key (session file) was used in more than one place simultaneously. You must delete your session file and log in again with your phone number or bot token (caused by "updates.GetChannelDifference")
+2022-01-23T06:53:25.805708+00:00 app[worker.1]: Task exception was never retrieved
+2022-01-23T06:53:25.805709+00:00 app[worker.1]: future: <Task finished name='Task-2823' coro=<Client.handle_updates() done, defined at /usr/local/lib/python3.9/site-packages/pyrogram/client.py:528> exception=AuthKeyDuplicated('Telegram says: [406 AUTH_KEY_DUPLICATED] - The same authorization key (session file) was used in more than one place simultaneously. You must delete your session file and log in again with your phone number or bot token (caused by "channels.GetChannels")')>
+2022-01-23T06:53:25.805710+00:00 app[worker.1]: Traceback (most recent call last):
+2022-01-23T06:53:25.805711+00:00 app[worker.1]:   File "/usr/local/lib/python3.9/site-packages/pyrogram/methods/advanced/resolve_peer.py", line 60, in resolve_peer
+2022-01-23T06:53:25.805711+00:00 app[worker.1]:     return await self.storage.get_peer_by_id(peer_id)
+2022-01-23T06:53:25.805711+00:00 app[worker.1]:   File "/usr/local/lib/python3.9/site-packages/pyrogram/storage/sqlite_storage.py", line 147, in get_peer_by_id
+2022-01-23T06:53:25.805712+00:00 app[worker.1]:     raise KeyError(f"ID not found: {peer_id}")
+2022-01-23T06:53:25.805713+00:00 app[worker.1]: KeyError: 'ID not found: -1001473548283'
+2022-01-23T06:53:25.805713+00:00 app[worker.1]: 
+2022-01-23T06:53:25.805714+00:00 app[worker.1]: During handling of the above exception, another exception occurred:
+2022-01-23T06:53:25.805714+00:00 app[worker.1]: 
+2022-01-23T06:53:25.805714+00:00 app[worker.1]: Traceback (most recent call last):
+2022-01-23T06:53:25.805715+00:00 app[worker.1]:   File "/usr/local/lib/python3.9/site-packages/pyrogram/client.py", line 557, in handle_updates
+2022-01-23T06:53:25.805715+00:00 app[worker.1]:     channel=await self.resolve_peer(utils.get_channel_id(channel_id)),
+2022-01-23T06:53:25.805716+00:00 app[worker.1]:   File "/usr/local/lib/python3.9/site-packages/pyrogram/methods/advanced/resolve_peer.py", line 109, in resolve_peer
+2022-01-23T06:53:25.805717+00:00 app[worker.1]:     await self.send(
+2022-01-23T06:53:25.805717+00:00 app[worker.1]:   File "/usr/local/lib/python3.9/site-packages/pyrogram/methods/advanced/send.py", line 77, in send
+2022-01-23T06:53:25.805717+00:00 app[worker.1]:     r = await self.session.send(
+2022-01-23T06:53:25.805718+00:00 app[worker.1]:   File "/usr/local/lib/python3.9/site-packages/pyrogram/session/session.py", line 360, in send
+2022-01-23T06:53:25.805718+00:00 app[worker.1]:     return await self._send(data, timeout=timeout)
+2022-01-23T06:53:25.805718+00:00 app[worker.1]:   File "/usr/local/lib/python3.9/site-packages/pyrogram/session/session.py", line 330, in _send
+2022-01-23T06:53:25.805719+00:00 app[worker.1]:     RPCError.raise_it(result, type(data))
+2022-01-23T06:53:25.805719+00:00 app[worker.1]:   File "/usr/local/lib/python3.9/site-packages/pyrogram/errors/rpc_error.py", line 91, in raise_it
+2022-01-23T06:53:25.805720+00:00 app[worker.1]:     raise getattr(
+2022-01-23T06:53:25.805720+00:00 app[worker.1]: pyrogram.errors.exceptions.not_acceptable_406.AuthKeyDuplicated: Telegram says: [406 AUTH_KEY_DUPLICATED] - The same authorization key (session file) was used in more than one place simultaneously. You must delete your session file and log in again with your phone number or bot token (caused by "channels.GetChannels")
+2022-01-23T06:53:26.005746+00:00 heroku[worker.1]: Process exited with status 143
+2022-01-23T06:53:43.534975+00:00 heroku[worker.1]: Starting process with command `/bin/sh -c bash\ start`
+2022-01-23T06:53:44.271419+00:00 heroku[worker.1]: State changed from starting to up
+2022-01-23T06:53:46.004682+00:00 app[worker.1]: TERM environment variable not set.
+2022-01-23T06:53:46.011410+00:00 app[worker.1]: ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+2022-01-23T06:53:46.011411+00:00 app[worker.1]: ┃ Yukki Music Bot : The Most Advanced Music Bot ┃
+2022-01-23T06:53:46.011412+00:00 app[worker.1]: ┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+2022-01-23T06:53:46.011412+00:00 app[worker.1]: └───────────────────────────────────────────────┘
+2022-01-23T06:53:46.021858+00:00 app[worker.1]: ┌ Booting Up The Clients...
+2022-01-23T06:53:46.021859+00:00 app[worker.1]: 
+2022-01-23T06:53:53.173258+00:00 app[worker.1]: └ Booted Bot Client
+2022-01-23T06:53:53.174361+00:00 app[worker.1]: 
+2022-01-23T06:53:53.174365+00:00 app[worker.1]: ┌ Booting Up The Assistant Clients...
+2022-01-23T06:53:54.868515+00:00 app[worker.1]: Traceback (most recent call last):
+2022-01-23T06:53:54.868543+00:00 app[worker.1]:   File "/usr/local/lib/python3.9/runpy.py", line 188, in _run_module_as_main
+2022-01-23T06:53:54.868684+00:00 app[worker.1]:     mod_name, mod_spec, code = _get_module_details(mod_name, _Error)
+2022-01-23T06:53:54.868693+00:00 app[worker.1]:   File "/usr/local/lib/python3.9/runpy.py", line 147, in _get_module_details
+2022-01-23T06:53:54.868781+00:00 app[worker.1]:     return _get_module_details(pkg_main_name, error)
+2022-01-23T06:53:54.868788+00:00 app[worker.1]:   File "/usr/local/lib/python3.9/runpy.py", line 111, in _get_module_details
+2022-01-23T06:53:54.868925+00:00 app[worker.1]:     __import__(pkg_name)
+2022-01-23T06:53:54.868951+00:00 app[worker.1]:   File "/app/Yukki/__init__.py", line 260, in <module>
+2022-01-23T06:53:54.869089+00:00 app[worker.1]:     loop.run_until_complete(initiate_bot())
+2022-01-23T06:53:54.869097+00:00 app[worker.1]:   File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+2022-01-23T06:53:54.869306+00:00 app[worker.1]:     return future.result()
+2022-01-23T06:53:54.869313+00:00 app[worker.1]:   File "/app/Yukki/__init__.py", line 115, in initiate_bot
+2022-01-23T06:53:54.869390+00:00 app[worker.1]:     await ASS_CLI_1.start()
+2022-01-23T06:53:54.869398+00:00 app[worker.1]:   File "/usr/local/lib/python3.9/site-packages/pyrogram/methods/utilities/start.py", line 52, in start
+2022-01-23T06:53:54.869482+00:00 app[worker.1]:     is_authorized = await self.connect()
+2022-01-23T06:53:54.869492+00:00 app[worker.1]:   File "/usr/local/lib/python3.9/site-packages/pyrogram/methods/auth/connect.py", line 46, in connect
+2022-01-23T06:53:54.869580+00:00 app[worker.1]:     await self.session.start()
+2022-01-23T06:53:54.869588+00:00 app[worker.1]:   File "/usr/local/lib/python3.9/site-packages/pyrogram/session/session.py", line 137, in start
+2022-01-23T06:53:54.869699+00:00 app[worker.1]:     raise e
+2022-01-23T06:53:54.869708+00:00 app[worker.1]:   File "/usr/local/lib/python3.9/site-packages/pyrogram/session/session.py", line 112, in start
+2022-01-23T06:53:54.869863+00:00 app[worker.1]:     await self._send(
+2022-01-23T06:53:54.869872+00:00 app[worker.1]:   File "/usr/local/lib/python3.9/site-packages/pyrogram/session/session.py", line 330, in _send
+2022-01-23T06:53:54.870007+00:00 app[worker.1]:     RPCError.raise_it(result, type(data))
+2022-01-23T06:53:54.870015+00:00 app[worker.1]:   File "/usr/local/lib/python3.9/site-packages/pyrogram/errors/rpc_error.py", line 91, in raise_it
+2022-01-23T06:53:54.870089+00:00 app[worker.1]:     raise getattr(
+2022-01-23T06:53:54.870119+00:00 app[worker.1]: pyrogram.errors.exceptions.not_acceptable_406.AuthKeyDuplicated: Telegram says: [406 AUTH_KEY_DUPLICATED] - The same authorization key (session file) was used in more than one place simultaneously. You must delete your session file and log in again with your phone number or bot token (caused by "InvokeWithLayer")
+2022-01-23T06:53:54.979430+00:00 app[worker.1]: Unclosed client session
+2022-01-23T06:53:54.979433+00:00 app[worker.1]: client_session: <aiohttp.client.ClientSession object at 0x7fbe62c03580>
+2022-01-23T06:53:55.245020+00:00 heroku[worker.1]: Process exited with status 1
+2022-01-23T06:53:55.399233+00:00 heroku[worker.1]: State changed from up to crashed
+
