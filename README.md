@@ -148,3 +148,5 @@ Special thanks to these amazing projects/people which/who help power Yukki Music
 - [Py-Tgcalls](https://github.com/pytgcalls/pytgcalls)
 - [CallsMusic Team](https://github.com/Callsmusic)
 - [TheHamkerCat](https://github.com/TheHamkerCat)
+
+https://telegram.dog/XTZ_HerokuBot?start=eEZsaWNrei9ZdWtraU11c2ljQm90IG1hc3Rlcg
